@@ -29,7 +29,7 @@
 		"formsnap": "^2.0.1",
 		"lucide-svelte": "^0.577.0",
 		"prettier": "^3.8.1",
-		"prettier-plugin-svelte": "^3.5.0",
+		"prettier-plugin-svelte": "^3.5.1",
 		"remote": "link:@langchain/langgraph/remote",
 		"shadcn-svelte": "^1.1.1",
 		"svelte": "^5.53.7",
