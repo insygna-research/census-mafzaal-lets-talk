@@ -10,7 +10,7 @@ import os
 import time
 from typing import Any, Dict, List, Optional, Tuple
 
-from langchain.schema.document import Document
+from langchain_core.documents import Document
 from langchain_qdrant import QdrantVectorStore
 
 from lets_talk.shared.config import (

@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import List, Optional
 
 
-from langchain.schema.document import Document
+from langchain_core.documents import Document
 from langchain_qdrant import QdrantVectorStore
 from lets_talk.utils.wrapper import init_embeddings_wrapper
 from qdrant_client import QdrantClient, models

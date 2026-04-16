@@ -5,7 +5,7 @@ from typing import Any, Dict, List, Optional, Union
 from langchain_core.messages import BaseMessage, HumanMessage
 from langchain_core.runnables import RunnableConfig
 from langchain_core.tools import tool
-from langchain.schema.document import Document
+from langchain_core.documents import Document
 from langchain.chat_models import init_chat_model
 from langgraph.prebuilt import create_react_agent
 from langchain_core.vectorstores.base import VectorStoreRetriever
