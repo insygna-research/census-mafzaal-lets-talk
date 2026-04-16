@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python -c \"from langchain_core.callbacks.manager import CallbackManagerForToolRun, AsyncCallbackManagerForToolRun; print\\('OK'\\)\")",
+      "Bash(.venv/bin/python -c \"from lets_talk.core.rag.retriever import create_retriever; print\\('retriever OK'\\)\")",
+      "Bash(.venv/bin/python -c \"from lets_talk.main import app; print\\('app OK'\\)\")",
+      "Bash(timeout 15 ./start_langgraph_dev.sh)",
+      "Bash(.venv/bin/pip show *)",
+      "Bash(uv pip *)",
+      "Bash(~/.local/bin/uv run *)",
+      "Bash(~/.local/bin/uv pip *)"
+    ]
+  }
+}

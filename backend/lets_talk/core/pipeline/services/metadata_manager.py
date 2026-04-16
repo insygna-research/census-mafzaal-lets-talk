@@ -13,7 +13,7 @@ import time
 from typing import Dict, List, Any, Optional, Tuple
 
 import pandas as pd
-from langchain.schema.document import Document
+from langchain_core.documents import Document
 
 from lets_talk.shared.config import (
     CHECKSUM_ALGORITHM,

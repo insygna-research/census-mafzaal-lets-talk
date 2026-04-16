@@ -8,8 +8,8 @@ for better embedding and retrieval.
 import logging
 from typing import List, Tuple, Optional
 
-from langchain.schema.document import Document
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from lets_talk.shared.config import (
     CHUNK_SIZE,

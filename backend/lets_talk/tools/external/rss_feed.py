@@ -2,7 +2,7 @@
 from typing import Optional, List, Dict, Any
 from pydantic import BaseModel, Field
 from langchain_core.tools import Tool
-from langchain.callbacks.manager import CallbackManagerForToolRun, AsyncCallbackManagerForToolRun
+from langchain_core.callbacks.manager import CallbackManagerForToolRun, AsyncCallbackManagerForToolRun
 import feedparser
 import logging
 

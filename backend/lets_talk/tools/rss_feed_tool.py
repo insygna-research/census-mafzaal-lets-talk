@@ -4,7 +4,7 @@ RSS Feed tool implementation.
 
 from typing import Optional, Type, ClassVar, List, Any
 from pydantic import BaseModel, Field
-from langchain.callbacks.manager import CallbackManagerForToolRun, AsyncCallbackManagerForToolRun
+from langchain_core.callbacks.manager import CallbackManagerForToolRun, AsyncCallbackManagerForToolRun
 from langchain_core.tools.base import ArgsSchema
 from .base import BaseTool
 from typing import List, Optional, Dict, Any

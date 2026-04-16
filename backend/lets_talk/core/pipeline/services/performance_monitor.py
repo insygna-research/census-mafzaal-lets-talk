@@ -9,7 +9,7 @@ import logging
 import time
 from typing import Any, Dict, List, Tuple
 
-from langchain.schema.document import Document
+from langchain_core.documents import Document
 
 from lets_talk.shared.config import (
     ADAPTIVE_CHUNKING,

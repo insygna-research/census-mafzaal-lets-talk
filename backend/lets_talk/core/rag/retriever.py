@@ -1,15 +1,15 @@
 """RAG retriever implementation."""
 import logging
 from typing import List, Optional
-from langchain.schema.document import Document
+from langchain_core.documents import Document
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams
 from langchain_community.document_loaders import WebBaseLoader
 from langchain.chat_models import init_chat_model
 from langchain_core.vectorstores.base import VectorStoreRetriever
-from langchain.retrievers.multi_query import MultiQueryRetriever
-from langchain.retrievers import EnsembleRetriever
+from langchain_classic.retrievers.multi_query import MultiQueryRetriever
+from langchain_classic.retrievers.ensemble import EnsembleRetriever
 from langchain_community.retrievers import BM25Retriever
 
 

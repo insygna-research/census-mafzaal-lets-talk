@@ -10,7 +10,7 @@ import os
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from langchain.schema.document import Document
+from langchain_core.documents import Document
 from langchain_community.document_loaders import DirectoryLoader
 from langchain_community.document_loaders.text import TextLoader
 

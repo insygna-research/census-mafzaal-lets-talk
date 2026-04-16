@@ -29,6 +29,9 @@ print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
+# Ensure ~/.local/bin is in PATH (where uv is typically installed)
+export PATH="$HOME/.local/bin:$PATH"
+
 # Check if uv is installed
 if ! command -v uv &> /dev/null; then
     print_error "uv package manager is not installed or not in PATH"
