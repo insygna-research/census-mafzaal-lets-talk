@@ -5,6 +5,92 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-04-15
+
+### Added
+- Initial Docker Compose configuration for production environment
+- Production Docker Compose setup with service definitions and health checks
+- Enhanced Docker management script with environment variable loading
+- Nginx startup script with configuration templating
+- Custom entrypoint script for web server startup with enhanced configuration
+
+### Changed
+- **BREAKING**: Upgraded LangChain packages to 1.0+ (langchain-core, langchain-community, langchain-openai, langchain-ollama, langchain-huggingface)
+- **BREAKING**: Upgraded LangGraph from 0.6.x to 1.0.x
+- **BREAKING**: Upgraded Pandas from 2.3.x to 3.0.x
+- **BREAKING**: Upgraded FastAPI from 0.116.x to 0.135.x
+- **BREAKING**: Upgraded Svelte packages to latest versions with Svelte 5 compatibility
+- **BREAKING**: Upgraded various @langchain packages in frontend
+- Updated Docker configuration to use pre-built images instead of build context
+- Refactored code structure for improved readability and maintainability
+- Enhanced vector store loading logic with better error handling
+- Updated API service configuration in docker-compose
+- Upgraded GitHub Actions (checkout 4→5→6, setup-node 4→5→6, docker actions to v4+)
+- Improved agent variable naming and JSON references
+
+### Dependencies - Backend
+- Upgraded alembic from 1.16.4 to 1.18.4
+- Upgraded apscheduler from 3.11.0 to 3.11.2
+- Upgraded arxiv from 2.2.0 to 2.4.1
+- Upgraded aiohttp from 3.12.15 to 3.13.4
+- Upgraded beautifulsoup4 from 4.13.4 to 4.14.3
+- Upgraded feedparser from 6.0.11 to 6.0.12
+- Upgraded ipykernel from 6.30.1 to 7.2.0
+- Upgraded ipython from 9.4.0 to 9.12.0
+- Upgraded ipywidgets from 8.1.7 to 8.1.8
+- Upgraded langchain from 0.3.27 to 1.0.3
+- Upgraded langchain-text-splitters from 0.3.9 to 1.0.0
+- Upgraded langchain-qdrant from 0.2.0 to 0.2.1
+- Upgraded langchain-together from 0.3.1 to 0.4.0
+- Upgraded langchain-experimental from 0.3.4 to 0.4.1
+- Upgraded matplotlib from 3.10.5 to 3.10.8
+- Upgraded psutil from 7.0.0 to 7.2.2
+- Upgraded psycopg2-binary from 2.9.10 to 2.9.11
+- Upgraded pydantic from 2.11.7 to 2.12.5
+- Upgraded pytest from 8.4.1 to 9.0.2
+- Upgraded pytest-asyncio from 1.1.0 to 1.3.0
+- Upgraded pytest-cov from 6.2.1 to 7.1.0
+- Upgraded pytest-mock from 3.14.1 to 3.15.1
+- Upgraded python-dotenv from 1.1.1 to 1.2.2
+- Upgraded qdrant-client from 1.15.1 to 1.17.1
+- Upgraded ragas from 0.3.0 to 0.4.3
+- Upgraded sqlalchemy from 2.0.42 to 2.0.48
+- Upgraded tqdm from 4.67.1 to 4.67.3
+- Upgraded uvicorn from 0.35.0 to 0.42.0
+- Upgraded websockets from 15.0.1 to 16.0
+
+### Dependencies - Frontend
+- Upgraded Svelte packages with Svelte 5 compatibility updates
+- Upgraded @langchain/langgraph from 0.4.4 to 1.0.15
+- Upgraded @langchain/langgraph-sdk from 0.0.107 to 1.8.0
+- Upgraded bits-ui from 2.9.1 to 2.16.3
+- Upgraded lucide-svelte from 0.536.0 to 0.575.0
+- Upgraded @lucide/svelte to 1.0.1
+- Upgraded marked from 16.4.2 to 17.0.5
+- Upgraded prettier from 3.7.3 to 3.8.1
+- Upgraded prettier-plugin-svelte to 3.5.1
+- Upgraded shadcn-svelte from 1.0.12 to 1.1.1
+- Upgraded tailwindcss from 4.1.17 to 4.2.2
+- Upgraded @tailwindcss/forms to 0.5.11
+- Upgraded @tailwindcss/vite to 4.2.2
+- Upgraded tailwind-merge from 3.4.0 to 3.5.0
+- Upgraded tailwind-variants from 2.1.0 to 3.2.2
+- Upgraded vite from 7.0.6 to 7.3.1
+- Upgraded vite-plugin-devtools-json to 1.0.0
+- Upgraded @internationalized/date to 3.12.0
+- Upgraded acorn from 8.15.0 to 8.16.0
+- Upgraded @sveltejs/kit and @sveltejs/vite-plugin-svelte to latest
+
+### Fixed
+- Fixed typo in agent variable name and corresponding JSON reference
+- Improved error handling in vector store loading
+- Enhanced code structure and readability
+- Corrected API service configuration references
+
+### Security
+- Updated Docker actions to version 4.0+ for improved security
+- Enhanced dependencies to latest versions with security patches
+
 ## [0.1.5] - 2025-08-09
 
 ### Added
