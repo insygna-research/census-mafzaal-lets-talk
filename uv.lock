@@ -1762,7 +1762,7 @@ wheels = [
 
 [[package]]
 name = "langgraph-cli"
-version = "0.4.21"
+version = "0.4.23"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -1771,9 +1771,9 @@ dependencies = [
     { name = "pathspec" },
     { name = "python-dotenv" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ad/42/6320aad6dfe95827e6fbf6a9e835263b554b340c0cf12386cc6a4403471d/langgraph_cli-0.4.21.tar.gz", hash = "sha256:7c03c69d22e0f12267c576cef23b4b29e0a631b83902075c8e75d6c549c9d993", size = 1020652, upload-time = "2026-04-08T01:31:42.883Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4d/f0/f987c13cf35214bbe1a6f6f911b3e61afaa071b7bb3d7b2a94ffd2cff921/langgraph_cli-0.4.23.tar.gz", hash = "sha256:620d2fe7506580d57e90384ae42495af7f6092e8f7c6c11f8e010a8e57177075", size = 1024326, upload-time = "2026-04-17T17:03:54.004Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/93/38/6d7231122820bded2467dd88028e2ff2e2210a166f18311ea261ee5998f8/langgraph_cli-0.4.21-py3-none-any.whl", hash = "sha256:34e5a228293339bf45d10a6c713ace742314d6047adcf909acc7d2decbb1b825", size = 73603, upload-time = "2026-04-08T01:31:41.666Z" },
+    { url = "https://files.pythonhosted.org/packages/c6/cb/079bf0aaabbe49a88ee5e51196f461f2f15bfa35c743b15d8a31ff983d88/langgraph_cli-0.4.23-py3-none-any.whl", hash = "sha256:3b4357c0dfa4725628b119f4aa543298cd6fa6cd948ac3a5480b404fedb7a536", size = 73684, upload-time = "2026-04-17T17:03:52.915Z" },
 ]
 
 [package.optional-dependencies]
@@ -1948,7 +1948,7 @@ dev = [
     { name = "ipython", specifier = ">=9.7.0" },
     { name = "ipywidgets", specifier = ">=8.1.8" },
     { name = "langchain-huggingface", specifier = ">=0.3.1" },
-    { name = "langgraph-cli", extras = ["inmem"], specifier = ">=0.4.21" },
+    { name = "langgraph-cli", extras = ["inmem"], specifier = ">=0.4.23" },
     { name = "matplotlib", specifier = ">=3.10.7" },
     { name = "pytest", specifier = ">=9.0.1" },
     { name = "pytest-asyncio", specifier = ">=1.3.0" },
