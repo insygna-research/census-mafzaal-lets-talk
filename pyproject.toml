@@ -62,7 +62,7 @@ dev = [
     "grandalf>=0.8",
     "langgraph-cli[inmem]>=0.4.21",
     "langchain-huggingface>=0.3.1",
-    "unstructured[md]>=0.18.11",
+    "unstructured[md]>=0.22.22",
 ]
 
 [tool.pytest.ini_options]
