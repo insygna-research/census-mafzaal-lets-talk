@@ -41,9 +41,9 @@ envsubst '${API_KEY_1} ${API_KEY_2} ${API_KEY_3} ${CORS_DOMAIN_1} ${CORS_DOMAIN_
 echo "🧹 Cleaning up empty API key entries..."
 sed -i '/^\s*""\s*1;/d' /tmp/nginx.conf
 
-# Clean up empty CORS domain checks
-echo "🧹 Cleaning up empty CORS domain checks..."
-sed -i '/if.*~\*.*\${}\$/d' /tmp/nginx.conf
+# Clean up empty CORS map entries (when a CORS_DOMAIN variable is unset)
+echo "🧹 Cleaning up empty CORS map entries..."
+sed -i -E '/~\*\^https\?:\/\/\$"/d' /tmp/nginx.conf
 
 # Move the cleaned configuration to the final location
 mv /tmp/nginx.conf /etc/nginx/nginx.conf
