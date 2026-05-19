@@ -2076,7 +2076,7 @@ dev = [
     { name = "pytest-cov", specifier = ">=7.0.0" },
     { name = "pytest-mock", specifier = ">=3.15.1" },
     { name = "ragas", specifier = ">=0.3.9" },
-    { name = "unstructured", extras = ["md"], specifier = ">=0.22.23" },
+    { name = "unstructured", extras = ["md"], specifier = ">=0.22.27" },
 ]
 
 [[package]]
@@ -4338,7 +4338,7 @@ wheels = [
 
 [[package]]
 name = "unstructured"
-version = "0.22.23"
+version = "0.22.27"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -4365,9 +4365,9 @@ dependencies = [
     { name = "unstructured-client" },
     { name = "wrapt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/12/5960eb3d5fa2532ed5495c1c72442c022c2568c60f9c2f9fa020bac4007a/unstructured-0.22.23.tar.gz", hash = "sha256:75051c5a1dcfeca3c77149fc5e0ae5f1f0ee0fc31ec7f93bb259ce70dc4d5fb8", size = 1519424, upload-time = "2026-04-24T18:43:22.178Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fe/13/21f782985dfb0e2216e0609993631f87f838a7adade32c15f092b019fc91/unstructured-0.22.27.tar.gz", hash = "sha256:616afecb87677939e4395dc3a316675dece3ace36268d267d908e9bbe6dfd207", size = 1524921, upload-time = "2026-05-05T17:55:47.823Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/34/83/b72d25dd50056150a9ea8b08f0607ca3becab1c5ae368078d32a69ed82ab/unstructured-0.22.23-py3-none-any.whl", hash = "sha256:34b85c328dc8c8a10802af234429c0eab7533021fa0d07d4f3fe70387e6c65cc", size = 1575277, upload-time = "2026-04-24T18:43:19.669Z" },
+    { url = "https://files.pythonhosted.org/packages/6f/9f/c51488127715f7c26f491927281a76272c22b2cab96b37634be31d1fa588/unstructured-0.22.27-py3-none-any.whl", hash = "sha256:4184200e898eb91042df3bf2990dfeb50d761e6494ba4bfd5457e5a2d5e46f0e", size = 1582227, upload-time = "2026-05-05T17:55:45.517Z" },
 ]
 
 [package.optional-dependencies]
