@@ -3,9 +3,10 @@ events {
 }
 
 http {
-    upstream lets_talk_api {
-        server api:8000;
-    }
+    # Use Docker's internal DNS resolver for dynamic upstream resolution.
+    # This ensures nginx re-resolves the api hostname after container restarts
+    # instead of caching the IP from startup time.
+    resolver 127.0.0.11 valid=30s ipv6=off;
 
     # Rate limiting for anonymous users
     limit_req_zone $binary_remote_addr zone=public_api:10m rate=30r/m;
@@ -42,8 +43,11 @@ http {
         # Public endpoint - /threads accessible to anonymous users
         location ~ ^/threads {
             limit_req zone=public_api burst=10 nodelay;
-            
-            proxy_pass http://lets_talk_api;
+
+            set $upstream_api http://api:8000;
+            proxy_pass $upstream_api;
+            proxy_http_version 1.1;
+            proxy_set_header Connection "";
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -85,8 +89,11 @@ http {
             proxy_hide_header Access-Control-Allow-Methods;
             proxy_hide_header Access-Control-Allow-Headers;
             proxy_hide_header Access-Control-Allow-Credentials;
-            
-            proxy_pass http://lets_talk_api;
+
+            set $upstream_api http://api:8000;
+            proxy_pass $upstream_api;
+            proxy_http_version 1.1;
+            proxy_set_header Connection "";
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -101,8 +108,11 @@ http {
             }
             
             limit_req zone=auth_api burst=20 nodelay;
-            
-            proxy_pass http://lets_talk_api;
+
+            set $upstream_api http://api:8000;
+            proxy_pass $upstream_api;
+            proxy_http_version 1.1;
+            proxy_set_header Connection "";
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -128,8 +138,11 @@ http {
             }
             
             limit_req zone=auth_api burst=50 nodelay;
-            
-            proxy_pass http://lets_talk_api;
+
+            set $upstream_api http://api:8000;
+            proxy_pass $upstream_api;
+            proxy_http_version 1.1;
+            proxy_set_header Connection "";
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
